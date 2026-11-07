@@ -1,0 +1,85 @@
+@use '../../../styles/variables' as vars;
+
+.services-hero {
+    background: linear-gradient(135deg, vars.$primary-dark 0%, vars.$primary 100%);
+    padding: 5rem 0;
+    text-align: center;
+    color: vars.$text-white;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+
+        .accent {
+            color: vars.$accent;
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        opacity: 0.9;
+    }
+}
+
+.services-list {
+    padding: 5rem 0;
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .service-card {
+        background: vars.$bg-card;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: vars.$glow-shadow;
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            color: vars.$text-light;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: vars.$text-gray;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+
+            .tag {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35rem;
+                padding: 0.4rem 0.7rem;
+                border-radius: 999px;
+                background: rgba(0, 240, 255, 0.08);
+                border: 1px solid rgba(0, 240, 255, 0.25);
+                color: vars.$text-light;
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.02em;
+            }
+
+            .tag-icon {
+                font-size: 0.85rem;
+            }
+        }
+    }
+}

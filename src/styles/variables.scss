@@ -1,0 +1,45 @@
+
+// Colores neón / futuristas
+$primary-dark: #0A0A1A;
+$primary: #1E1B4B;
+$primary-light: #312E81;
+$accent: #00F0FF;
+$accent-purple: #8B5CF6;
+$accent-pink: #EC4899;
+$accent-glow: rgba(0, 240, 255, 0.3);
+
+// Fondos
+$bg-dark: #0A0A0F;
+$bg-darker: #050508;
+$bg-card: rgba(30, 27, 75, 0.4);
+$bg-card-solid: #1E1B4B;
+
+// Textos
+$text-white: #FFFFFF;
+$text-light: #E2E8F0;
+$text-gray: #A1A1AA;
+$text-muted: #71717A;
+
+// Bordes
+$border-glow: rgba(0, 240, 255, 0.2);
+$border-glow-hover: rgba(0, 240, 255, 0.5);
+
+// Efectos
+$glow-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+$glow-shadow-strong: 0 0 30px rgba(0, 240, 255, 0.5);
+$neon-text: 0 0 10px rgba(0, 240, 255, 0.5);
+
+// Tipografía
+$font-primary: 'Space Grotesk', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Animaciones
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;

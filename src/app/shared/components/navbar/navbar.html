@@ -1,0 +1,26 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a routerLink="/">
+                 <img src="logo-futurisci.svg" alt="FuturistCI" class="logo-icon">
+            </a>
+        </div>
+
+        <div class="nav-links" [class.mobile-open]="isMobileMenuOpen">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+            <a routerLink="/about" routerLinkActive="active">Nosotros</a>
+            <a routerLink="/services" routerLinkActive="active">Soluciones</a>
+            <a routerLink="/servci" routerLinkActive="active">ServCI</a>
+            <a routerLink="/contact" routerLinkActive="active">Contacto</a>
+        </div>
+
+        <div class="nav-actions">
+            <button class="btn btn-outline-light">Portal Clientes</button>
+            <button class="btn btn-accent">Cotizar</button>
+        </div>
+
+        <button class="mobile-menu-btn" (click)="toggleMobileMenu()">
+            ☰
+        </button>
+    </div>
+</nav>

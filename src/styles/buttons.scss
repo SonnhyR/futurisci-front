@@ -1,0 +1,81 @@
+@use './variables' as vars;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+
+    &-large {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    &-small {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+}
+
+.btn-primary {
+    background: vars.$primary;
+    color: vars.$text-white;
+
+    &:hover {
+        background: vars.$primary-dark;
+        transform: translateY(-2px);
+        box-shadow: vars.$glow-shadow;
+    }
+}
+
+.btn-accent {
+    background: vars.$accent;
+    color: vars.$text-white;
+
+    &:hover {
+        background: vars.$accent-purple;
+        transform: translateY(-2px);
+        box-shadow: vars.$glow-shadow;
+    }
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid vars.$primary;
+    color: vars.$primary;
+
+    &:hover {
+        background: vars.$primary;
+        color: vars.$text-white;
+    }
+}
+
+.btn-outline-light {
+    background: transparent;
+    border: 2px solid vars.$text-white;
+    color: vars.$text-white;
+
+    &:hover {
+        background: vars.$text-white;
+        color: vars.$primary-dark;
+    }
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid vars.$accent;
+    color: vars.$accent;
+
+    &:hover {
+        background: vars.$accent;
+        color: vars.$text-white;
+    }
+}

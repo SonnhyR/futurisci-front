@@ -1,0 +1,70 @@
+@use '../../../../styles/variables' as vars;
+
+
+.footer {
+    background: vars.$primary-dark;
+    color: vars.$text-white;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-brand {
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+            .accent {
+                color: vars.$accent;
+            }
+        }
+
+        p {
+            color: vars.$text-muted;
+            line-height: 1.6;
+        }
+    }
+
+    .footer-links {
+        h4 {
+            margin-bottom: 1rem;
+            color: vars.$accent;
+        }
+
+        a {
+            display: block;
+            color: vars.$text-muted;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+
+            &:hover {
+                color: vars.$accent;
+            }
+        }
+    }
+
+    .footer-contact {
+        h4 {
+            margin-bottom: 1rem;
+            color: vars.$accent;
+        }
+
+        p {
+            color: vars.$text-muted;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: vars.$text-muted;
+        font-size: 0.875rem;
+    }
+}

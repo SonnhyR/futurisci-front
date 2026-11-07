@@ -1,0 +1,82 @@
+@use '../../../styles/variables' as vars;
+
+.servci-hero {
+    background: linear-gradient(135deg, vars.$primary-dark 0%, vars.$primary 100%);
+    padding: 5rem 0;
+    text-align: center;
+    color: vars.$text-white;
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+
+        .accent {
+            color: vars.$accent;
+        }
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.servci-description {
+    padding: 4rem 0;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+
+        .accent {
+            color: vars.$accent;
+        }
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto;
+        color: vars.$text-gray;
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+}
+
+.servci-features {
+    background: vars.$bg-card;
+    padding: 4rem 0;
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+
+        .accent {
+            color: vars.$accent;
+        }
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .feature-card {
+        background: vars.$bg-card;
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        box-shadow: vars.$glow-shadow;
+
+        h3 {
+            color: vars.$text-light;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: vars.$text-gray;
+        }
+    }
+}

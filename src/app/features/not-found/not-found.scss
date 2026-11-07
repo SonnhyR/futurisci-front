@@ -1,0 +1,26 @@
+@use '../../../styles/variables' as vars;
+
+.not-found {
+    text-align: center;
+    padding: 5rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-size: 6rem;
+        color: vars.$accent;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: vars.$text-light;
+    }
+
+    p {
+        color: vars.$text-gray;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,113 @@
+@use '../../../../styles/variables' as vars;
+
+.navbar {
+  background: rgba(10, 10, 26, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      
+     .logo-icon {
+      width: 60px;      // Cambiado de 40px a 55px
+      height: 60px;     // Cambiado de 40px a 55px
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+      
+      @media (max-width: vars.$breakpoint-md) {
+        width: 100px;    // Cambiado de 32px a 45px
+        height: 100px;   // Cambiado de 32px a 45px
+        }
+      }
+    }
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    
+    a {
+      text-decoration: none;
+      color: vars.$text-gray;
+      font-weight: 500;
+      transition: all 0.3s;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, vars.$accent, vars.$accent-purple);
+        transition: width 0.3s;
+      }
+      
+      &:hover, &.active {
+        color: vars.$accent;
+        
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .nav-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: vars.$text-white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width: vars.$breakpoint-md) {
+    .nav-links, .nav-actions {
+      display: none;
+    }
+    
+    .mobile-menu-btn {
+      display: block;
+    }
+    
+    .nav-links.mobile-open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(10, 10, 26, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      gap: 1rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+    }
+  }
+}

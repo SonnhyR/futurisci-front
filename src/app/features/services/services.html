@@ -1,0 +1,25 @@
+<section class="services-hero">
+    <div class="container">
+        <h1>Nuestras <span class="accent">Soluciones</span></h1>
+        <p>Tecnología a la medida de tu negocio</p>
+    </div>
+</section>
+
+<section class="services-list">
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card" *ngFor="let service of servicesList">
+                <div class="icon">{{ service.icon }}</div>
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.description }}</p>
+
+                <div class="service-tags" *ngIf="service.tags?.length">
+                    <span class="tag" *ngFor="let tag of service.tags">
+                        <span class="tag-icon">{{ tag.icon }}</span>
+                        {{ tag.label }}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

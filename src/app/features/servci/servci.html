@@ -1,0 +1,28 @@
+<section class="servci-hero">
+    <div class="container">
+        <h1>Serv<span class="accent">CI</span></h1>
+        <p>Tu deseo, tu presupuesto, nuestra misión</p>
+        <button class="btn btn-accent btn-large">Próximamente</button>
+    </div>
+</section>
+
+<section class="servci-description">
+    <div class="container">
+        <h2>¿Qué es <span class="accent">ServCI</span>?</h2>
+        <p>Es un ambiente digital innovador que revoluciona la forma en que las personas acceden a servicios en
+            Venezuela. El usuario define su necesidad, propone un precio, y la solución experta llega casi de forma
+            inmediata.</p>
+    </div>
+</section>
+
+<section class="servci-features">
+    <div class="container">
+        <h2>Características <span class="accent">únicas</span></h2>
+        <div class="features-grid">
+            <div class="feature-card" *ngFor="let feature of features">
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>

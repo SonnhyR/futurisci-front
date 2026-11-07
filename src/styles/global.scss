@@ -1,0 +1,48 @@
+@use './variables' as vars;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: vars.$font-primary;
+    color: vars.$text-white;
+    background-color: vars.$bg-dark;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media (max-width: vars.$breakpoint-md) {
+        padding: 0 1.5rem;
+    }
+
+    @media (max-width: vars.$breakpoint-sm) {
+        padding: 0 1rem;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
